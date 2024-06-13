@@ -4,15 +4,19 @@ function appendNum(n){
     let number = document.createElement('h4');
     number.innerHTML = n;
     document.body.appendChild(number);
+    
 }
                           
 function primeNumbers(n){
     for(let i = 0; i <= n; i++){
         if(isPrime(i)){
-            setTimeout(() => appendNum(i), 0);                                     
+            appendNum(i);                              
         }
+        
     }
-    return;
+    setTimeout(function() {
+        alert("The Prime numbers are displayed.");
+    }, 0);    
 }
 
 function isPrime(n){
@@ -28,5 +32,5 @@ function isPrime(n){
 }
 
 primeNumbers(10000);
-setTimeout(alert('Prime numbers are generated.'),0);
+
 
