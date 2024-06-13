@@ -39,30 +39,4 @@ const trampoline = (f, ...args) => {
 arr = [1, [2, [3], 4], 5]
 console.log(trampoline(flattenArr, arr));
 
-//part 3
-
-function primeNumbers(n){
-    let numbers = []
-    for(let i = 0; i < n; i++){
-        if(isPrime(i)){
-            numbers.push[i];
-        }
-    }
-}
-
-function isPrime(n){
-    if(number < 2){
-        return false;
-    }
-    for(let i = 0; i < Math.sqrt(n)+1; i++){
-        if(n % i === 0){
-            return false;
-        }
-    }
-    return true;
-}
-
-let text = document.createElement('p');
-
-text.innerHTML = primeNumbers(10000);
 
