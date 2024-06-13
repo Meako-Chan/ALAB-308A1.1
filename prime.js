@@ -1,14 +1,18 @@
 //part 3
 
+function appendNum(n){
+    let number = document.createElement('h4');
+    number.innerHTML = n;
+    document.body.appendChild(number);
+}
+                          
 function primeNumbers(n){
-    let numbers = "";
     for(let i = 0; i <= n; i++){
-        console.log(isPrime(i))
         if(isPrime(i)){
-            numbers = numbers + " " + i;
+            setTimeout(() => appendNum(i), 0);                                     
         }
     }
-    return numbers;
+    return;
 }
 
 function isPrime(n){
@@ -23,9 +27,6 @@ function isPrime(n){
     return true;
 }
 
-let text = document.createElement('h2');
+primeNumbers(10000);
+setTimeout(alert('Prime numbers are generated.'),0);
 
-text.innerHTML = primeNumbers(10000);
-
-document.body.appendChild(text);
-alert("Prime numbers are generated");
