@@ -25,8 +25,7 @@ function isPrime(n){
 
 let text = document.createElement('h2');
 
-console.log(primeNumbers(10));
 text.innerHTML = primeNumbers(10000);
 
-document.appendChild(text);
+document.body.appendChild(text);
 alert("Prime numbers are generated");
